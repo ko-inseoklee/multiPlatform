@@ -40,24 +40,6 @@
        (firebase-auth.js, firebase-firestore.js, firebase-analytics.js...)
        https://firebase.google.com/docs/web/setup#available-libraries -->
 
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "YoUr_RaNdOm_API_kEy",
-      authDomain: "your-project-name.firebaseapp.com",
-      databaseURL: "https://your-project-name.firebaseio.com",
-      projectId: "your-project-name",
-      storageBucket: "your-project-name.appspot.com",
-      messagingSenderId: "012345678901",
-      appId: "1:109876543210:web:r4nd0mH3xH45h",
-      measurementId: "G-S0M3V4LU3"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -71,5 +53,27 @@
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-firestore.js"></script>R
+  <script src="./appKey.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCgn7cW2ibyihZs7R5qC7rSkDCPaDQi200",
+    authDomain: "friendlyeats-f9c0c.firebaseappR.com",
+    projectId: "friendlyeats-f9c0c",
+    storageBucket: "friendlyeats-f9c0c.appspot.com",
+    messagingSenderId: "970598523192",
+    appId: "1:970598523192:web:022f53bfae848a654c61cd"
+  };
+    // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
