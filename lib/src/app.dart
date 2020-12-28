@@ -21,7 +21,7 @@ class FriendlyEatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Inseok\'s practice. ',
+      title: 'Inseok test 2',
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case RestaurantPage.route:
