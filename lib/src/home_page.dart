@@ -99,6 +99,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         leading: Icon(Icons.restaurant),
         title: Text('FriendlyEats'),
+        centerTitle: true,
         bottom: PreferredSize(
           preferredSize: Size(320, 48),
           child: Padding(
@@ -124,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                             arguments: RestaurantPageArguments(id: id));
                       })
                   : EmptyListView(
-                      child: Text('FriendlyEats has no restaurants yet!'),
+                      child: Text('FriendlyEats has no restaurants yet! add?'),
                       onPressed: _onAddRandomRestaurantsPressed,
                     ),
         ),
