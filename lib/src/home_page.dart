@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                             arguments: RestaurantPageArguments(id: id));
                       })
                   : EmptyListView(
-                      child: Text('FriendlyEats has no restaurants yet! add?'),
+                      child: Text('FriendlyEats has no restaurants yet!'),
                       onPressed: _onAddRandomRestaurantsPressed,
                     ),
         ),

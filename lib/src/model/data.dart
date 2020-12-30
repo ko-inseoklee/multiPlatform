@@ -35,17 +35,27 @@ Future<void> addRestaurant(Restaurant restaurant) {
 
 Stream<QuerySnapshot> loadAllRestaurants() {
   // TODO: Complete the "Display data from Cloud Firestore" step.
-  return Stream<QuerySnapshot>.value(null);
+  return FirebaseFirestore.instance
+      .collection('restaurants')
+      .orderBy('avgRating', descending: true)
+      .limit(50)
+      .snapshots();
 }
 
 List<Restaurant> getRestaurantsFromQuery(QuerySnapshot snapshot) {
   // TODO: Complete the "Display data from Cloud Firestore" step.
-  return [];
+  return snapshot.docs.map((DocumentSnapshot doc) {
+    return Restaurant.fromSnapshot(doc);
+  }).toList();
 }
 
 Future<Restaurant> getRestaurant(String restaurantId) {
   // TODO: Complete the "Get data" step.
-  return Future.value(null);
+  return FirebaseFirestore.instance
+      .collection('restaurants')
+      .doc(restaurantId)
+      .get()
+      .then((DocumentSnapshot doc) => Restaurant.fromSnapshot(doc));
 }
 
 Future<void> addReview({String restaurantId, Review review}) {
